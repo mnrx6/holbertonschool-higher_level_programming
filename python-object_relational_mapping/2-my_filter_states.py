@@ -13,12 +13,11 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
 
+    state_name=sys.argv[4]
+
     cursor = db_conn.cursor()
-    cursor.execute('''
-            SELECT * FROM states
-            WHERE name = '{}'
-            "ORDER BY id ASC;
-            '''.format(sys.argv[4]))
+    cursor.execute("SELECT * FROM states WHERE name = '{}' "
+                   "ORDER BY id ASC;".format(state_name))
 
     states = cursor.fetchall()
 
