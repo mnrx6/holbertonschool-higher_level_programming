@@ -10,13 +10,12 @@ if __name__ == "__main__":
         port=3306,
         user=sys.argv[1],
         passwd=sys.argv[2],
-        db=sys.argv[3],
-        state_name=sys.argv[4]
+        db=sys.argv[3]
     )
 
     cursor = db_conn.cursor()
     cursor.execute("SELECT * FROM states WHERE name = '{}' "
-                   "ORDER BY id ASC;".format(state_name))
+                   "ORDER BY id ASC;".format(sys.argv[4]))
 
     states = cursor.fetchall()
 
