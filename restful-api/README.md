@@ -1,19 +1,30 @@
-1. HTTP vs HTTPS
+# RESTful API.
 
-HTTP transfers data without encryption, while HTTPS uses TLS encryption to protect data during transmission.
+1. HTTP vs HTTPS
+Feature	HTTP	HTTPS
+Security	Not secure	Secure
+Encryption	No encryption	TLS encryption
+Port	80	443
 
 2. HTTP Request and Response
-
-An HTTP request contains a method, path, headers, and sometimes a body. An HTTP response contains a status code, headers, and possibly a body.
+HTTP Request	HTTP Response
+Sent by the client	Sent by the server
+Contains method and path	Contains status code
+Contains headers	Contains headers
+May contain a body	May contain a body
 
 3. HTTP Methods
-- GET: Retrieves data.
-- POST: Creates a resource.
-- PUT: Updates or replaces a resource.
-- DELETE: Deletes a resource.
+Method	Description	Use Case
+GET	Retrieves data	Fetch user information
+POST	Creates a resource	Add a new user
+PUT	Updates or replaces a resource	Update user details
+DELETE	Deletes a resource	Remove a user
+
 4. HTTP Status Codes
-- 200: Request successful.
-- 201: Resource created.
-- 400: Bad request.
-- 404: Resource not found.
-- 500: Internal server error.
+Code	Description	Example
+200	OK	Request successful
+201	Created	New resource created
+400	Bad Request	Invalid data sent
+404	Not Found	Page does not exist
+500	Internal Server Error	Server encounters an error
+
